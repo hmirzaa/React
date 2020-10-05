@@ -25,8 +25,10 @@ import React, { Component } from 'react'
 // import FocusInput from './components/FocusInput'
 // import FRParentInput from './components/FRParentInput'
 // import Portal from './components/Portal'
-import Hero from './components/Hero'
-import ErrorBoundry from './components/ErrorBoundry'
+// import Hero from './components/Hero'
+// import ErrorBoundry from './components/ErrorBoundry'
+import ClickCounter from './components/ClickCounter'
+import HoverCounter from './components/HoverCounter'
 
 
 
@@ -43,18 +45,8 @@ export default class App extends Component {
     return (
       <div>
         <center>
-         <ErrorBoundry>
-          <Hero heroName="Batman" />
-          </ErrorBoundry>
-
-          <ErrorBoundry>
-          <Hero heroName="Superman" />
-          </ErrorBoundry>
-          
-          <ErrorBoundry>
-          <Hero heroName="Joker" />
-          </ErrorBoundry>
-        
+              <ClickCounter name="Hamza" />
+              <HoverCounter name="Hamza" />
         </center>
       </div> 
     )
