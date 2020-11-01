@@ -4,6 +4,20 @@ import Menu from './Menu'
 import Footer from './Footer'
 
 export default class Content extends Component {
+
+
+  componentDidMount()
+  {
+    if(localStorage.getItem("username")==null){
+      this.props.history.push(`/`)
+    }
+  }
+
+  Logout = () => {
+    localStorage.clear();
+    this.props.history.push(`/`)
+  }
+
     render() {
         return (
             <div>
@@ -22,6 +36,8 @@ export default class Content extends Component {
           <ol className="breadcrumb float-sm-right">
             <li className="breadcrumb-item"><a href="#">Home</a></li>
             <li className="breadcrumb-item active">Dashboard v1</li>
+            <button onClick={this.Logout}>Logout</button>
+
           </ol>
         </div>{/* /.col */}
       </div>{/* /.row */}
